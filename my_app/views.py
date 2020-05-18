@@ -20,13 +20,13 @@ def new_search(request):
 	soup = BeautifulSoup(data, features='html.parser')
 
 	post_list = soup.find_all('li', {'class': 'result-row'})
-
+	final_posting = []
 	if post_list:
 		post_title = post_list[0].find(class_ = 'result-title').text
 		post_url = post_list[0].find('a').get('href')
 		# post_price = post_list[0].find(class_ = 'result-price').text
 		# print(post_title,post_url)
-		final_posting = []
+		# final_posting = []
 		for post in post_list:
 			post_title = post.find(class_ = 'result-title').text
 			post_url = post.find('a').get('href')
