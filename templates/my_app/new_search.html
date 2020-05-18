@@ -3,9 +3,9 @@
 <h2 style="text-align: center;">{{search | title}}</h2>
 
 {% if error_message %}
-	<p>
-		<strong>{{error_message}}</strong>
-	</p>
+	<div class="alert alert-info">
+		{{error_message}}
+	</div>
 {% endif %}
 <div class="row">
 	{% for post in final_posting %}
