@@ -45,7 +45,7 @@ def new_search(request):
 
 			final_posting.append((post_title, post_url, post_price, post_image_url))
 	else:
-		error_message = "You didn't select a choice.",
+		error_message = "Search not found",
 
 	context = {
 		'search': search,
